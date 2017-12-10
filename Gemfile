@@ -18,6 +18,9 @@ gem 'devise'
 #Gema de bootstrap
 gem 'bootstrap-sass'
 
+#Tema Material Design para bootstrap
+gem 'bootstrap-material-design'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
