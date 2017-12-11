@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'email/create'
 
+  devise_for :users
+  
+  post "/emails/create", as: :create_email
+  
   authenticated :user do
     root 'welcome#index'
   end
