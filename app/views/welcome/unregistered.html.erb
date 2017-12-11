@@ -11,6 +11,12 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-11 col-xs-12 center-block no-float">
+            <%=form_tag("/",method: :post) do %>
+                <%=email_field_tag "email",nil,class: "col-xs-12 inline_block text-center landing-form", placeholder:"Escribe aqui tu mail" %>
+        </div>
+    </div>
 </header>
 
 <div>Hola no estas registrado</div>
