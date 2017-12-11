@@ -10,10 +10,24 @@ $orange: #FF9328;
 
 /* Colores de Ecommerce */
 
+.white{
+	background-color:white;
+}
+.white_text{
+	color:white;
+}
+
+.black{
+	background-color:black;
+}
+.black_text{
+	color:black;
+}
+
 .green{
 	background-color: $green;
 }
-.green-text{
+.green_text{
 	color: $green;
 }
 .grey{
@@ -78,4 +92,10 @@ $orange: #FF9328;
 .inline_block{
     float: none !important;
     display: inline-block;
+}
+
+/*Tamaño*/
+
+.ultra_big{
+    font-size: 6em;
 }
