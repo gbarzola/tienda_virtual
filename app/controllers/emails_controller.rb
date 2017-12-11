@@ -1,4 +1,4 @@
-class EmailController < ApplicationController
+class EmailsController < ApplicationController
   def create
     @email = MyEmail.new(email: params[:email])
       if @email.save
