@@ -1,20 +1,23 @@
-<header class="green big_padding">
+<header class="green big-padding">
     <div class="row">
-        <div class="col-md-10 no_float center-block">
-            <div class="col-md-6 no_padding inline_block">
-                <%= image_tag "logo_wali.png", width:"100" %><span class="black_text middle_text">  WALI</span>
+        <div class="col-md-10 no-float center-block">
+            <div class="col-md-12 no-padding inline-block">
+                <%= image_tag "logo_wali.png", width:"100" %><span class="black-text middle-text">  WALI</span>
+            </div>
+            <div class="col-md-6 no-padding inline-block">
                 <h1 class="white_text ultra_big"><strong>Hey... Ofrece tus mejores productos digitales</strong></h1> 
             </div>
-            
-            <div class="col-md-5 no_padding inline_block">
-                <%= image_tag "fondo1.jpg", width:"500", height:"600" %>
+            <div class="col-md-5 no-padding inline-block">
+                <%= image_tag "fondo1.jpg", width:"500", height:"450" %>
             </div>
         </div>
     </div>
+    <br> 
     <div class="row">
-        <div class="col-md-11 col-xs-12 center-block no-float">
+        <div class="col-md-10 col-xs-12 no-float center-block ">
             <%=form_tag("/",method: :post) do %>
-                <%=email_field_tag "email",nil,class: "col-xs-12 inline_block text-center landing-form", placeholder:"Escribe aqui tu mail" %>
+                <%=email_field_tag "email",nil,class: "col-xs-12 inline-block text-center landing-form", placeholder:"Quieres saber mas noticias...Escribe aqui tu mail" %>
+            <% end %>
         </div>
     </div>
 </header>
