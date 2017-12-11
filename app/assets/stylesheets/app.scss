@@ -62,5 +62,20 @@ $orange: #FF9328;
 /*Paddings*/
 
 .big_padding{
-    padding:2em;
+    padding: 2em;
+}
+
+.no_padding{
+    padding: 0;
+}
+
+/*Alineamiento*/
+
+.no_float{
+    float: none !important;
+}
+
+.inline_block{
+    float: none !important;
+    display: inline-block;
 }
