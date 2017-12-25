@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'attachments/create'
-
-  get 'attachments/destroy'
-
-  get 'attachments/new'
-
+  resources :attachments , only: [:create,:destroy,:new]
   resources :products
   devise_for :users
   
