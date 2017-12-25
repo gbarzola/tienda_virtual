@@ -3,13 +3,19 @@ class AttachmentsController < ApplicationController
   before_action :authenticate_owner!
   
   def create
-    raise params
+  
   end
 
   def destroy
   end
 
   def new
+    @attachment = Attachment.new(attachment_params)
+    if @attachment.save
+      redirect_to @attachment.product , notice:"Se guardo"
+    else
+      redirect_to @product , notice:"No se guardo"
+    end
   end
   
   private
@@ -20,5 +26,8 @@ class AttachmentsController < ApplicationController
         return
       end
     end
-  
+    
+    def attachment_params
+      params.require(:attachment).permit(:product_id,:archivo)
+    end
 end
