@@ -20,7 +20,19 @@
         </nav>
         <div>
             <h3 class="grey-text">Archivos</h3>
-            <%= render "attachments/form" %>
+            <ol>
+                <% @product.attachments.each do |attachment| %>
+                <li class="grey-text other-grey">
+                    <div class="col-md-11">
+                        <%= attachment.archivo_file_name %>
+                    </div>
+                    <div class="col-md-1">
+                    X
+                    </div> 
+                </li>
+                <% end %>
+            </ol>
+            <%= render "attachments/form" , product_id: @product.id %>
         </div>
     </div>
 </div>
