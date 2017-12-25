@@ -18,5 +18,9 @@
             <%= link_to 'Editar producto', edit_product_path(@product) %>
             <%= link_to 'Eliminar producto', @product, method: :delete , data:{confirm:"Estas seguro de eliminar producto?"} %>
         </nav>
+        <div>
+            <h3 class="grey-text">Archivos</h3>
+            <%= render "attachments/form" %>
+        </div>
     </div>
 </div>
