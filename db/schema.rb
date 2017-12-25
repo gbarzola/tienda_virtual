@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 20171225145927) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "product_id"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.string   "archivo_file_name"
+    t.string   "archivo_content_type"
+    t.integer  "archivo_file_size"
+    t.datetime "archivo_updated_at"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   add_index "attachments", ["product_id"], name: "index_attachments_on_product_id"
