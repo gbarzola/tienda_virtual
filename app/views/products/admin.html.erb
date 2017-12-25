@@ -1,0 +1,22 @@
+<div class="col-md-3">
+    <nav>
+        <div class="white-text green col-md-12">
+            Admin general
+        </div>
+    </nav>
+</div>
+<div class="col-md-9">
+    <div class="card">
+        <div class="col-md-9">
+            <h1><%= @product.name %></h1>
+        </div>
+        <div class="col-md-3">
+            <p class="big red-text">10 USD</p>
+        </div>
+        <nav>
+            <%= link_to 'Ver como cliente', product_path(id: @product.id , client:true) %>
+            <%= link_to 'Editar producto', edit_product_path(@product) %>
+            <%= link_to 'Eliminar producto', @product, method: :delete %>
+        </nav>
+    </div>
+</div>
