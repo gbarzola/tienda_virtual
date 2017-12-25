@@ -1,3 +1,44 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 center-block">
+            <div class="card large-padding">
+                <div class="col-md-12">
+                  <h1 class="grey-text bold"><%= @product.name %></h1>
+                </div>
+                
+                <div class="col-md-6">
+                  TODO 
+                </div> 
+                <div class="col-md-6">
+                  <h3 class="blue-text bold normal"><%= @product.user.email %></h3>
+                  <h3 class="green-text bold normal">
+                    Precio :
+                    <span class="grey-text"><%= @product.pricing %></span>
+                  </h3>
+                  <h3 class="green-text bold normal">
+                    Archivos:
+                    <span class="grey-text">20</span>
+                  </h3>
+                  <h3 class="green-text bold normal">
+                    Tamaño:
+                    <span class="grey-text">"2gb"</span>
+                  </h3>
+                </div>
+                <div class="col-md-12">
+                  <h3 class="green-text bold normal">Descripcion</h3>
+                  <p>
+                    <%= @product.description %>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +48,7 @@
 
 <p>
   <strong>Pricing:</strong>
-  <%= @product.pricing %>
+  
 </p>
 
 <p>
@@ -17,7 +58,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @product.user %>
+  
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

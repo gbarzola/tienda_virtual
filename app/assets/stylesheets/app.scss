@@ -1,75 +1,80 @@
-$green: #A3D87B;
+$green: #339282;
 $grey: #5A6576;
 $other_grey: #E7ECEE;
-$blue: #058cc5;
+$blue: #1B9DF6;
 $red: #d2527f;
 $light_blue:#3498db;
 $yellow: #EEF9B6;
 $orange: #FF9328;
 
+/* Texto */
+
+.bold{
+	font-weight: bold;
+}
 
 /* Colores de Ecommerce */
 
 .white{
-	background-color:white;
+	background-color: white;
 }
-.white_text{
-	color:white;
+.white-text{
+	color: white;
 }
 
 .black{
-	background-color:black;
+	background-color: black;
 }
-.black_text{
-	color:black;
+.black-text{
+	color: black;
 }
 
 .green{
 	background-color: $green;
 }
-.green_text{
+.green-text{
 	color: $green;
 }
 .grey{
 	background-color: $grey;
 }
-.grey_text{
+.grey-text{
 	color: $grey;
 }
-.other_grey{
+.other-grey{
 	background-color: $other_grey;
 }
-.other_grey_text{
+.other-grey-text{
 	color: $other_grey;
 }
 .blue{
 	background-color: $blue;
 }
-.blue_text{
+.blue-text{
 	color: $blue;
 }
 .red{
 	background-color: $red;
 }
-.red_text{
+.red-text{
 	color: $red;
 }
-.light_blue{
+.light-blue{
 	background-color: $light_blue;
 }
-.light_blue_text{
+.light-blue-text{
 	color: $light_blue;
 }
 .yellow{
 	background-color: $yellow;
 }
-.yellow_text{
+.yellow-text{
 	color: $yellow;
 }
 .orange{
 	background-color: $orange;
 }
-.orange_text{
+.orange-text{
 	color: $orange;
 }
 
@@ -109,8 +114,21 @@ $orange: #FF9328;
 .ultra-big{
     font-size: 5em;
 }
+
+.big{
+	font-size: 3em;
+}
+
 .middle-text{
     font-size: 2.5em;
+}
+
+.normal{
+	font-size: 1.2em;
+}
+
+.small{
+	font-size: 12px;
 }
 
 .landing-form{
