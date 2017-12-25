@@ -16,7 +16,7 @@
         <nav>
             <%= link_to 'Ver como cliente', product_path(id: @product.id , client:true) %>
             <%= link_to 'Editar producto', edit_product_path(@product) %>
-            <%= link_to 'Eliminar producto', @product, method: :delete %>
+            <%= link_to 'Eliminar producto', @product, method: :delete , data:{confirm:"Estas seguro de eliminar producto?"} %>
         </nav>
     </div>
 </div>
