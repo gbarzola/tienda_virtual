@@ -1,11 +1,14 @@
 class AttachmentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :authenticate_owner!
+  before_action :set_attachment, only: [:destroy,:show]
+  before_action :set_product, only: [:destroy]
+  before_action :authenticate_owner!, except: :show
   
   def new
   end
-
-  def destroy
+  
+  def show
+    send_file @attachment.archivo.path
   end
 
   def create
@@ -17,9 +20,26 @@ class AttachmentsController < ApplicationController
     end
   end
   
+  def destroy
+    @attachment.destroy
+    redirect_to @product
+  end
+  
   private
+    
+    def set_attachment
+      @attachment = Attachment.find(params[:id])
+    end
+  
+    def set_product
+      @product = @attachment.product
+    end
+    
     def authenticate_owner!
-      @product = Product.find(params[:attachment][:product_id])
+      if params.has_key? :attachment
+        @product = Product.find(params[:attachment][:product_id])
+      end
+      
       if @product.nil? || @product.user != current_user
         redirect_to root_path , notice: "No puedes editar ese producto"
         return

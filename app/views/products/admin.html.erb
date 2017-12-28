@@ -24,10 +24,13 @@
                 <% @product.attachments.each do |attachment| %>
                 <li class="grey-text other-grey">
                     <div class="col-md-11">
-                        <%= attachment.archivo_file_name %>
+                        <%= link_to attachment.archivo_file_name , attachment %>
+                        
                     </div>
                     <div class="col-md-1">
-                    X
+                        <%= link_to attachment , method: :delete , data:{confirm:"Estas seguro de eliminar producto?"} do %>
+                        X
+                        <% end %>
                     </div> 
                 </li>
                 <% end %>
