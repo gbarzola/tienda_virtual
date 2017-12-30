@@ -24,7 +24,7 @@ gem 'bootstrap-material-design'
 #Paperclip para subir imagenes
 gem 'paperclip'
 
-#Gema para incorporar el sistema de pagos de paypal
+#Gema para incorporar el sistema de pagos de paypal SDK
 gem 'paypal-sdk-rest'
 
 # Use jquery as the JavaScript library
