@@ -1,0 +1,36 @@
+<header>
+	<div class="green">
+	    <ul class="no-list no-padding text-center">
+   	        <li class="col-md-3 inline-block tall-padding">
+	        <% if user_signed_in? %>
+				<%=link_to root_path, class:"right-space white-text" do %>
+					<i class="mdi-maps-store-mall-directory"></i>Mi tienda
+				<% end %>
+				<%=link_to root_path, class:"right-space white-text" do %>
+					<i class="mdi-action-verified-user"></i>Ordenes
+				<% end %>
+				<%=link_to root_path, class:"right-space white-text" do %>
+					<i class="mdi-image-timer"></i>Descuentos
+				<% end %>
+		    <% end %>
+	        </li>
+	        
+	        <li class="col-md-3 inline-block text-center tall-padding">
+	            <%=image_tag "logo_wali.png",height:"40px"%>
+	        </li>
+	        
+	        <li class="col-md-3 inline-block tall-padding white-text">
+	            <% if user_signed_in? %>
+				    <%=link_to root_path, class:"right-space white-text" do %>
+						<i class="mdi-maps-local-grocery-store"></i>
+				        Mi carrito 
+				        (
+				        <%= @shopping_cart.products.count %>
+				        )
+				    <% end %>
+				<% end %>
+	        </li>
+	    </ul>
+	</div>
+</header>
+http://demo.geekslabs.com/materialize/v2.2/layout03/css-icons.html

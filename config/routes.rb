@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   
   post "/emails/create", as: :create_email
   
+  get "/carrito", to: "shopping_carts#show"
+  
   authenticated :user do
     root 'welcome#index'
   end
