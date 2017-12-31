@@ -1,4 +1,7 @@
 class PaymentsController < ApplicationController
+  
+  include PayPal::SDK::REST
+  
   def create
     @payment = Payment.new({
 			intent: "sale",
@@ -8,7 +11,7 @@ class PaymentsController < ApplicationController
 			transactions: [
 				{
 					item_list: {
-						items: "DEMO"
+						items: [{name: "Demo", sku: :item, price: (@shopping_cart.total/100), currency: "USD" , quantity: 1}]
 					},
 					amount:{
 						total: (@shopping_cart.total / 100),
@@ -18,9 +21,16 @@ class PaymentsController < ApplicationController
 				}
 			],
 			redirect_urls: {
-				return_url: @return_url,
-				cancel_url: @cancel_url
+				return_url: "https://hackathon-minsa-gbarzola1.c9users.io",
+				cancel_url: "https://hackathon-minsa-gbarzola1.c9users.io/carrito"
 			}
     })
+    
+    if @payment.create
+			redirect_to @payment.links.find{|v| v.method == "REDIRECT" }.href
+		else
+			raise @payment.error.to_yaml
+		end
+    
   end
 end
