@@ -4,4 +4,8 @@ class ShoppingCart < ActiveRecord::Base
     
     enum status: {payed: 1, default:0}
     
+    def total
+        products.sum(:pricing)
+    end
+
 end
