@@ -26,10 +26,11 @@ class PaymentsController < ApplicationController
 			}
     })
     
-    if @payment.create
-			redirect_to @payment.links.find{|v| v.method == "REDIRECT" }.href
+    if payment.create
+			@payment = MyPayment.new(paypal_id: payment.id , ip: request.remote_ip)
+			redirect_to payment.links.find{|v| v.method == "REDIRECT" }.href
 		else
-			raise @payment.error.to_yaml
+			raise payment.error.to_yaml
 		end
     
   end
