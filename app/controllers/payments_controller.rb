@@ -3,7 +3,7 @@ class PaymentsController < ApplicationController
   include PayPal::SDK::REST
   
   def create
-    @payment = Payment.new({
+    payment = Payment.new({
 			intent: "sale",
 			payer:{
 				payment_method: "paypal"
@@ -27,10 +27,10 @@ class PaymentsController < ApplicationController
     })
     
     if payment.create
-			@payment = MyPayment.new(paypal_id: payment.id , ip: request.remote_ip)
-			redirect_to payment.links.find{|v| v.method == "REDIRECT" }.href
+			 @payment = MyPayment.new(paypal_id: payment.id , ip: request.remote_ip , shopping_cart_id: cookies[:shopping_cart_id] )
+			 redirect_to payment.links.find{|v| v.method == "REDIRECT" }.href
 		else
-			raise payment.error.to_yaml
+			raise payment.errors.to_yaml
 		end
     
   end
