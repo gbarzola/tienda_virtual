@@ -27,6 +27,9 @@ gem 'paperclip'
 #Gema para incorporar el sistema de pagos de paypal SDK
 gem 'paypal-sdk-rest'
 
+#Gema Aasm para crear maquinas de estado
+gem 'aasm'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
